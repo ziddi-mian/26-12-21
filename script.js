@@ -671,3 +671,23 @@ console.log(ISO8601_week_no(dt));
 
 dt = new Date(2015, 10, 1);
 console.log(ISO8601_week_no(dt));
+
+// Write a JavaScript function to get a full textual representation of a month, such as January or June.   
+// Test Data :
+// dt = new Date(2015, 10, 1);
+// console.log(full_month(dt));
+// "November"
+
+
+Date.longMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function full_month(dt)
+  { 
+   return Date.longMonths[dt.getMonth()]; 
+  }
+
+dt = new Date(); 
+console.log(full_month(dt)); 
+
+dt = new Date(2015, 10, 1); 
+console.log(full_month(dt));
