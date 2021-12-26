@@ -227,3 +227,27 @@ var yesterday =  function(date1){
 console.log(yesterday('Nov 15, 2014'));
 console.log(yesterday('Nov 16, 2015'));
 console.log(yesterday('Nov 17, 2016'));
+
+// program11
+
+// Write a JavaScript function to get the maximum date from an array of dates. Go to the editor
+
+// Test Data :
+// console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+// Output :
+// "2015/02/02"
+
+function max_date(all_dates) {
+    var max_dt = all_dates[0],
+      max_dtObj = new Date(all_dates[0]);
+    all_dates.forEach(function(dt, index)
+      {
+      if ( new Date( dt ) > max_dtObj)
+      {
+      max_dt = dt;
+      max_dtObj = new Date(dt);
+      }
+      });
+     return max_dt;
+      }
+    console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));
