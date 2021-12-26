@@ -744,3 +744,22 @@ console.log(full_year(dt));
 
 dt = new Date(2015, 10, 1); 
 console.log(full_year(dt));
+
+// Write a JavaScript function to get a two digit representation of a year.   
+// Examples : 79 or 04
+// Test Data :
+// dt = new Date(1989, 10, 1);
+// console.log(sort_year(dt));
+// "89"
+
+
+function sort_year(dt) 
+{ 
+  return ('' + dt.getFullYear()).substr(2);
+}
+
+dt = new Date(); 
+console.log(sort_year(dt)); 
+
+dt = new Date(1989, 10, 1); 
+console.log(sort_year(dt));
