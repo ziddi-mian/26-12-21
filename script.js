@@ -251,3 +251,27 @@ function max_date(all_dates) {
      return max_dt;
       }
     console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+
+
+    // program 12
+// Write a JavaScript function to get the minimum date from an array of dates. Go to the editor
+
+// Test Data :
+// console.log(min_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+// Output :
+// "2015/01/03"
+
+function min_date(all_dates) {
+    var min_dt = all_dates[0],
+     min_dtObj = new Date(all_dates[0]);
+    all_dates.forEach(function(dt, index)
+     {
+     if ( new Date( dt ) < min_dtObj)
+     {
+     min_dt = dt;
+     min_dtObj = new Date(dt);
+     }
+     });
+    return min_dt;
+     }
+   console.log(min_date(['2015/02/01', '2015/02/02', '2015/01/03']));
