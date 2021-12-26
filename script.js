@@ -205,3 +205,25 @@ var date_diff_indays = function(date1, date2) {
     }
     console.log(date_diff_indays('04/02/2014', '11/04/2014'));
     console.log(date_diff_indays('12/02/2014', '11/04/2014'));
+
+
+    //     progrm 10
+
+//     Write a JavaScript function to calculate 'yesterday day'.   
+
+// Test Data :
+// console.log(yesterday('Nov 15, 2014'));
+// console.log(yesterday('Nov 16, 2015'));
+// console.log(yesterday('Nov 17, 2016'));
+// Output :
+// "Fri Nov 14 2014 00:00:00 GMT+0530 (India Standard Time)"
+// "Sun Nov 15 2015 00:00:00 GMT+0530 (India Standard Time)"
+// "Wed Nov 16 2016 00:00:00 GMT+0530 (India Standard Time)"
+
+var yesterday =  function(date1){
+    var dt = new Date(date1);
+  return new Date((dt.setDate(dt.getDate()-1))).toString();
+}
+console.log(yesterday('Nov 15, 2014'));
+console.log(yesterday('Nov 16, 2015'));
+console.log(yesterday('Nov 17, 2016'));
